@@ -1,0 +1,47 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="route.js"></script>
+  <script src="directive.js"></script>
+
+  <title></title>
+</head>
+
+<body ng-app="testRoute" ng-controller="testCtrl" style="background-color:#d4beb9">
+
+
+  <div class="">
+    <div class="">
+      <a href="#!new">route</a>
+      <div layout="column">
+        <div layout="row" style="background-color:blue">
+          <div layout="column">
+            name
+          </div>
+          <div layout="column">
+            age
+          </div>
+        </div>
+        <div layout="row" ng-repeat="item in array">
+          <div layout="column" style="background-color:rgb(255, 0, 0)">
+            {{item.name}}
+          </div>
+          <div layout="column" style="background-color:red">
+            {{item.age}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-view>
+
+  </div>
+  <new-directive> </new-directive>
+
+</body>
+
+</html>
