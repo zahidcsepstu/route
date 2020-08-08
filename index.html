@@ -1,32 +1,39 @@
-<html lang="en" dir="ltr">
-
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="route.js"></script>
-  <script src="directive.js"></script>
-
-  <title></title>
+  <script src="module.js"></script>
+  <script src="index.controller.js"></script>
+  <script src="new.directive/directive.js"></script>
+  <script src="new.directive/new.directive.controller.js"></script>
 </head>
 
 <body ng-app="testRoute" ng-controller="testCtrl" style="background-color:#dacd22">
-  <div class="">
-    <div class="">
-      <a href="#!new">route</a>
-      <table border="1">
-        <tr>
-          <td>name</td>
-          <td>age</td>
-        </tr>
-        <tr ng-repeat="item in array">
-          <td>{{item.name}}</td>
-          <td>{{item.age}}</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div ng-view></div>
-  <new-directive> </new-directive>
-</body>
+  <a href="#!new">route</a>
+  <table border="1">
+    <tr>
+      <td>name</td>
+      <td>age</td>
+    </tr>
+    <tr ng-repeat="item in array">
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+    </tr>
+  </table>
 
-</html>
+  <!-- <div layout="column">
+    <div layout="row">
+      <div layout="column">name</div>
+      <div layout="column">reg</div>
+      <div layout="column">roll</div>
+      <div layout="column">address</div>
+    </div>
+    <div layout="row">
+      <div layout="column">zahid</div>
+      <div layout="column">1502023</div>
+      <div layout="column">06211</div>
+      <div layout="column">dhaka</div>
+    </div>
+  </div> -->
+  <new-directive> </new-directive>
+  <div ng-view></div>
+</body>
