@@ -1,10 +1,15 @@
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.2.0/angular-material.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.2.0/angular-material.min.js"></script>
   <script src="module.js"></script>
   <script src="index.controller.js"></script>
-  <script src="new.directive/directive.js"></script>
-  <script src="new.directive/new.directive.controller.js"></script>
+  <script src="/new.directive/directive.js"></script>
+  <script src="/new.directive/new.directive.controller.js"></script>
 </head>
 
 <body ng-app="testRoute" ng-controller="testCtrl" style="background-color:#dacd22">
@@ -20,7 +25,7 @@
     </tr>
   </table>
 
-  <!-- <div layout="column">
+  <div layout="column">
     <div layout="row">
       <div layout="column">name</div>
       <div layout="column">reg</div>
@@ -33,7 +38,7 @@
       <div layout="column">06211</div>
       <div layout="column">dhaka</div>
     </div>
-  </div> -->
+  </div>
   <new-directive> </new-directive>
   <div ng-view></div>
 </body>
