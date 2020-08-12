@@ -10,35 +10,48 @@
   <script src="index.controller.js"></script>
   <script src="/new.directive/directive.js"></script>
   <script src="/new.directive/new.directive.controller.js"></script>
+  <script src="service.js"></script>
+  <script src="dialog.controller.js"></script>
 </head>
 
-<body ng-app="testRoute" ng-controller="testCtrl" style="background-color:#dacd22">
-  <a href="#!new">route</a>
-  <table border="1">
-    <tr>
-      <td>name</td>
-      <td>age</td>
-    </tr>
-    <tr ng-repeat="item in array">
-      <td>{{item.name}}</td>
-      <td>{{item.age}}</td>
-    </tr>
-  </table>
-
-  <div layout="column">
-    <div layout="row">
-      <div layout="column">name</div>
-      <div layout="column">reg</div>
-      <div layout="column">roll</div>
-      <div layout="column">address</div>
+<body ng-app="testRoute" ng-controller="testCtrl">
+  <div layout="column" style="width: 100%;height:100%;">
+    <div layout="row"
+      style="width: 100%;height: 150px;background-color:rgb(0, 43, 0);color: white;  justify-content: center; align-items: center;font-size: 40px;">
+      CRUD Operation Angularjs Project
     </div>
-    <div layout="row">
-      <div layout="column">zahid</div>
-      <div layout="column">1502023</div>
-      <div layout="column">06211</div>
-      <div layout="column">dhaka</div>
+    <div layout="row" style="width: 100%;height:100%;">
+      <div layout="column" style="width: 20%;height:100%; background-color: darkgreen;">
+        <div class="md-sidenav-left">
+
+          <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools" style="background-color:rgb(0, 71, 0);">Options</h1>
+          </md-toolbar>
+
+          <div layout="row"
+            style="height: 60px;width: 100%;background-color: rgba(0, 0, 0, 0.192);align-items: center;margin-top: 10px;">
+            <a href=" #!list" style="width: 100%;color: white;text-align: center;text-decoration:none;">List</a>
+          </div>
+
+          <div layout="row"
+            style="height: 60px;width: 100%;background-color: rgba(0, 0, 0, 0.192);align-items: center;margin-top: 10px;">
+            <a href=" #!insert" style="width: 100%;color: white;text-align: center;text-decoration:none;">Insert</a>
+          </div>
+
+          <div layout="row"
+            style="height: 60px;width: 100%;background-color: rgba(0, 0, 0, 0.192);align-items: center;margin-top: 10px;">
+            <a href=" #!update" style="width: 100%;color: white;text-align: center;text-decoration:none;">Update</a>
+          </div>
+
+          <div layout="row"
+            style="height: 60px;width: 100%;background-color: rgba(0, 0, 0, 0.192);align-items: center;margin-top: 10px;">
+            <a href=" #!delete" style="width: 100%;color: white;text-align: center;text-decoration:none;">Delete</a>
+          </div>
+        </div>
+      </div>
+      <div layout="column" style="width: 80%;height:100%;background-color:rgb(170, 255, 170);">
+        <div style="height: 100%;width: 100%;" ng-view></div>
+      </div>
     </div>
   </div>
-  <new-directive> </new-directive>
-  <div ng-view></div>
 </body>

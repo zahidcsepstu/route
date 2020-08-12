@@ -1,0 +1,30 @@
+<body ng-app="testRoute" ng-controller="testCtrl">
+
+    <div layout="column" style="height: 100%;width: 100%;align-items: center;justify-content: center;">
+        <div layout="column" style="height: 70%;width: 70%;">
+            <div layout="row" style="width: 100%;margin-top: 10px;background-color: rgba(0, 0, 0, 0.281);padding: 7px;">
+                <div layout="column" style="text-align: center;" ng-repeat="col in columnArrayDelete"
+                    ng-style="widthSize(columnArrayDelete.length)">{{col}}</div>
+
+            </div>
+            <div layout="row" style="width: 100%;margin-top: 10px;background-color: rgba(0, 0, 0, 0.13);padding: 7px;"
+                ng-repeat="item in array">
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    {{$index+1}}</div>
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    {{item.name}}</div>
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    {{item.email}}</div>
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    {{item.phone}}</div>
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    {{item.address}}</div>
+                <div layout="column" layout-align="center center" ng-style="widthSize(columnArrayDelete.length)">
+                    <md-button class="md-raised md-accent" ng-click="delUser($index)" style="color: white;">Delete
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

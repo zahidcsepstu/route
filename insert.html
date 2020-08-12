@@ -1,0 +1,36 @@
+<div layout="column" style="height: 100%;width: 100%;" layout-align="center center">
+    <div layout="column" style="height: 80%;width: 70%;">
+        <md-content class="md-no-momentum" style="background-color: rgba(255, 254, 254, 0.616);">
+            <div style="padding: 30px;">
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <md-icon md-svg-src="/images/person.svg"></md-icon>
+                    <input ng-model="user.name" type="text">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/phone.svg"></md-icon>
+                    <input ng-model="user.phone" type="text" placeholder="Phone Number" aria-label="Phone Number">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/mail.svg"></md-icon>
+                    <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true"
+                        aria-label="Email (required)">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/address.svg" style="display:inline-block;"></md-icon>
+                    <input ng-model="user.address" type="text" placeholder="Address" aria-label="Address">
+
+                </md-input-container>
+
+                <div style="width: 100%;" layout="row" layout-align="center center">
+                    <md-button style="background-color: rgb(15, 65, 0);color:white" ng-click="insertData()">Add user
+                    </md-button>
+                </div>
+            </div>
+
+        </md-content>
+    </div>
+</div>

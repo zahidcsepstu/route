@@ -4,8 +4,17 @@
 
   app.config(function ($routeProvider) {
     $routeProvider
-      .when("/new", {
-        templateUrl: 'new.html'
+      .when("/list", {
+        templateUrl: 'list.html'
+      })
+      .when("/insert", {
+        templateUrl: 'insert.html'
+      })
+      .when("/update", {
+        templateUrl: 'update.html'
+      })
+      .when("/delete", {
+        templateUrl: 'delete.html'
       })
   });
 })();

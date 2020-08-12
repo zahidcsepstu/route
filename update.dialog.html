@@ -1,0 +1,46 @@
+<md-dialog aria-label="Update User">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Update User</h2>
+
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content" style="width: 500px;">
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <md-icon md-svg-src="/images/person.svg"></md-icon>
+                    <input ng-model="user.name" type="text">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/phone.svg"></md-icon>
+                    <input ng-model="user.phone" type="text" placeholder="Phone Number" aria-label="Phone Number">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/mail.svg"></md-icon>
+                    <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true"
+                        aria-label="Email (required)">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <md-icon md-svg-src="/images/address.svg" style="display:inline-block;"></md-icon>
+                    <input ng-model="user.address" type="text" placeholder="Address" aria-label="Address">
+
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="discard()" style="background-color: red;color:white;">
+                Discard
+            </md-button>
+            <md-button ng-click="save()" style="background-color:green;color:white;">
+                SAVE
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
