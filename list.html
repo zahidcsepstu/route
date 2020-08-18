@@ -1,4 +1,4 @@
-<body ng-app="testRoute" ng-controller="testCtrl">
+<body ng-app="testRoute" ng-controller="testCtrl as vm">
 
   <div layout="column" style="height: 100%;width: 100%;align-items: center;justify-content: center;">
     <div layout="column" style="height: 70%;width: 70%;">
@@ -8,7 +8,7 @@
 
       </div>
       <div layout="row" style="width: 100%;margin-top: 10px;background-color: rgba(0, 0, 0, 0.13);padding: 7px;"
-        ng-repeat="item in array">
+        ng-repeat="item in vm.array">
         <div layout="column" style="width: 20%;text-align: center;">{{$index+1}}</div>
         <div layout="column" style="width: 20%;text-align: center;">{{item.name}}</div>
         <div layout="column" style="width: 20%;text-align: center;">{{item.email}}</div>

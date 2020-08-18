@@ -1,6 +1,7 @@
 var app = angular.module("testRoute");
 app.controller("testCtrl", testCtrl);
 function testCtrl($scope, crudService, $mdDialog) {
+    var vm = this
     $scope.user = {
 
     }
@@ -9,7 +10,7 @@ function testCtrl($scope, crudService, $mdDialog) {
     $scope.columnArray = ["SN", "Name", "Email", "Phone", "Address"];
     $scope.columnArrayDelete = ["SN", "Name", "Email", "Phone", "Address", "Action"];
 
-    $scope.array = [
+    vm.array = [
         {
             "name": "ashik",
             "email": "ashik@gmail.com",
